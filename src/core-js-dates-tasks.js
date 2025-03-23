@@ -32,7 +32,10 @@ function dateToTimestamp(date) {
  * Date(2015, 10, 20, 23, 15, 1) => '23:15:01'
  */
 function getTime(date) {
-  return new Date(date).toLocaleTimeString();
+  return new Date(date).toLocaleTimeString('en-US', {
+    timeZone: 'UTC',
+    hour12: false,
+  });
 }
 
 /**
